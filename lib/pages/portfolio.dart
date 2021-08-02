@@ -6,7 +6,7 @@ import 'package:web_portfolio/utils/globals.dart';
 import 'home/components/footer.dart';
 import 'home/components/header.dart';
 
-class privacy extends StatelessWidget {
+class portfolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

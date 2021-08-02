@@ -86,6 +86,12 @@ class about extends StatelessWidget {
               SizedBox(
                 height: 50.0,
               ),
+              Center(
+                  child: Container(child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text("Bhejdo is an Indore based startup company founded in 2020 and dedicated to developing innovative hyper local solutions that give consumers total control over their hyper local needs. Bhejdo is a one stop solution for all the hyper local needs, delivering right from your key, important documents, your favourite food, groceries, medicine and even shifting your house from wherever you want within Indore.Just one year after our company’s inception, Bhejdo has already made tremendous progress towards our goal of providing affordable and innovative on demand delivery solutions, after an early kickstarter  journey of 7000+ on demand delivery which served as powerful proof of Bhejdo’s appeal among our target audience",style: TextStyle(height: 1.3,fontSize: 16),),
+                  ),width: 1300,),
+              ),
               SizedBox(
                 height: 50.0,
               ),

@@ -36,7 +36,7 @@ class IosAppAd extends StatelessWidget {
                   Expanded(
                     flex: constraints.maxWidth > 720.0 ? 1 : 0,
                     child: Image.asset(
-                      "clean.png",
+                      "assets/clean.png",
                       // Set width for image on smaller screen
                       width: constraints.maxWidth > 720.0 ? null : 350.0,
                     ),
@@ -97,7 +97,7 @@ class IosAppAd extends StatelessWidget {
                                 ),
                                 child: TextButton(
                                   onPressed: () {
-                                    Navigator.push(context,MaterialPageRoute(builder: (context) => sanitization()),);
+                                    Navigator.pushNamed(context, '/Sanitization');
                                   },
                                   child: Center(
                                     child: Text(
@@ -128,7 +128,7 @@ class IosAppAd extends StatelessWidget {
                                 padding: EdgeInsets.symmetric(horizontal: 28.0),
                                 child: TextButton(
                                   onPressed: () {
-                                    Navigator.push(context,MaterialPageRoute(builder: (context) => sanitization()),);
+                                    Navigator.pushNamed(context, '/Sanitization');
                                   },
                                   child: Center(
                                     child: Text(

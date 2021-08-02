@@ -11,8 +11,11 @@ import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/globals.dart';
 
 class Home extends StatelessWidget {
+
+  
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       key: Globals.scaffoldKey,
       endDrawer: Drawer(

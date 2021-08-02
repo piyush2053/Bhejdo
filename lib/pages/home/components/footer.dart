@@ -3,32 +3,31 @@ import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/models/footer_item.dart';
-import 'package:web_portfolio/pages/privacy.dart';
-import 'package:web_portfolio/pages/tandc.dart';
+
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 final List<FooterItem> footerItems = [
   FooterItem(
-    iconPath: "add.png",
+    iconPath: "assets/add.png",
     title: "ADDRESS",
     text1: "3rd Floor, Prestige Vihar, Scheme 74C",
     text2: "VIjay Nagar, Indore,(M.P) 452010",
   ),
   FooterItem(
-    iconPath: "phone.png",
+    iconPath: "assets/phone.png",
     title: "PHONE",
     text1: "+91 7471116975",
     text2: "+91 7000539194",
   ),
   FooterItem(
-    iconPath: "mail.png",
+    iconPath: "assets/mail.png",
     title: "EMAIL",
-    text1: "hello@eafgasdg.com",
-    text2: "hello@exasdad.com",
+    text1: "bhej.dodeliveryservices@gmail.com",
+    text2: "Info@bhejdodelivery.com",
   ),
   FooterItem(
-    iconPath: "whatsapp.png",
+    iconPath: "assets/whatsapp.png",
     title: "WHATSAPP",
     text1: "+91 7471116975",
     text2: "+91 7000539194",
@@ -140,7 +139,7 @@ Widget _buildUi(double width, BuildContext context) {
                     : MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(bottom: 8.0),
+                    padding: EdgeInsets.only(bottom: 15.0),
                     child: Text(
                       "Copyright (c) 2023 Bhejdo. All rights Reserved",
                       style: TextStyle(
@@ -148,47 +147,53 @@ Widget _buildUi(double width, BuildContext context) {
                       ),
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                           Navigator.push(context,MaterialPageRoute(builder: (context) => privacy()),);
-                        },
-                        child: MouseRegion(
-                          cursor: SystemMouseCursors.click,
+                  
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                             Navigator.pushNamed(context, '/PrivacyPolicy');
+                          },
+                          child: MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: Text(
+                              "Privacy Policy",
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                        
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
                           child: Text(
-                            "Privacy Policy",
+                            "|",
                             style: TextStyle(
                               color: Colors.black,
                             ),
                           ),
                         ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Text(
-                          "|",
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(context,MaterialPageRoute(builder: (context) => tandc()),);
-                        },
-                        child: MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: Text(
-                            "Terms & Conditions",
-                            style: TextStyle(
-                              color: Colors.black,
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/Terms&Conditions');
+                          },
+                          child: MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: Text(
+                              "Terms & Conditions",
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
                             ),
                           ),
                         ),
-                      )
-                    ],
+                        
+                      ],
+                    ),
                   )
                 ],
               )
@@ -196,6 +201,6 @@ Widget _buildUi(double width, BuildContext context) {
           );
         },
       ),
-    ),
+    ),    
   );
 }

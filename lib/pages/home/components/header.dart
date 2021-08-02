@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/models/header_item.dart';
 import 'package:web_portfolio/pages/getstarted.dart';
+import 'package:web_portfolio/pages/home/components/carousel_items.dart';
 import 'package:web_portfolio/pages/home/home.dart';
 import 'package:web_portfolio/pages/portfolio.dart';
 import 'package:web_portfolio/pages/services.dart';
@@ -13,33 +14,6 @@ import 'package:web_portfolio/utils/globals.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 import '../../about.dart';
-
-BuildContext context;
-
-List<HeaderItem> headerItems = [
-  HeaderItem(
-    title: "HOME",
-    onTap: () {
-      Navigator.push(context,MaterialPageRoute(builder: (context) => Home()),);
-    },
-  ),
-  HeaderItem(title: "ABOUT", onTap: () {
-    Navigator.push(context,MaterialPageRoute(builder: (context) => about()),);
-  }),
-  HeaderItem(title: "SERVICES", onTap: () {
-    
-  }),
-  HeaderItem(title: "PORTFOLIO", onTap: () {
-    
-  }),
-  HeaderItem(
-    title: "CONTACT US ",
-    onTap: () {
-      Navigator.push(context,MaterialPageRoute(builder: (context) => about()),);
-    },
-    isButton: true,
-  ),
-];
 
 class HeaderLogo extends StatelessWidget {
   @override
@@ -56,7 +30,7 @@ class HeaderLogo extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(66.0),
                 child: Image.asset(
-                  "bhejdo.jpg",
+                  "assets/bhejdo.jpg",
                   height: 40.0,
                   width: 40.0,
                 ),
@@ -66,6 +40,31 @@ class HeaderLogo extends StatelessWidget {
     );
   }
 }
+
+List<HeaderItem> headerItems = [
+  HeaderItem(
+    title: "HOME",
+    onTap: () {
+      Navigator.pushNamed(context, '/Home');
+    },
+  ),
+  HeaderItem(title: "ABOUT", onTap: () {
+    Navigator.pushNamed(context, '/About');
+  },),
+  HeaderItem(title: "SERVICES", onTap: () {
+    Navigator.pushNamed(context, '/Services');
+  }),
+  HeaderItem(title: "PORTFOLIO", onTap: () {
+    Navigator.pushNamed(context, '/Portfolio');
+  }),
+  HeaderItem(
+    title: "CONTACT US ",
+    onTap: () {
+     
+    },
+    isButton: true,
+  ),
+];
 
 class HeaderRow extends StatelessWidget {
   @override
@@ -89,7 +88,9 @@ class HeaderRow extends StatelessWidget {
                         padding: EdgeInsets.symmetric(
                             horizontal: 20.0, vertical: 5.0),
                         child: TextButton(
-                          onPressed: item.onTap,
+                          onPressed: (){
+                            Navigator.pushNamed(context, '/About');
+                          },
                           child: Text(
                             item.title,
                             style: GoogleFonts.poppins(
@@ -101,6 +102,7 @@ class HeaderRow extends StatelessWidget {
                         ),
                       ),
                     )
+                    
                   : MouseRegion(
                       cursor: SystemMouseCursors.click,
                       child: Container(
@@ -150,8 +152,7 @@ class Header extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             HeaderLogo(),
-            // Restart server to make icons work
-            // Lets make a scaffold key and create a drawer
+            
             GestureDetector(
               onTap: () {
                 Globals.scaffoldKey.currentState.openEndDrawer();

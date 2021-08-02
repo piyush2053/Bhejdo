@@ -89,7 +89,7 @@ class WebsiteAd extends StatelessWidget {
                                 ),
                                 child: TextButton(
                                   onPressed: () {
-                                     Navigator.push(context,MaterialPageRoute(builder: (context) => getstarted()),);
+                                    Navigator.pushNamed(context, '/GetStarted');
                                   },
                                   child: Center(
                                     child: Text(
@@ -120,7 +120,7 @@ class WebsiteAd extends StatelessWidget {
                                 padding: EdgeInsets.symmetric(horizontal: 28.0),
                                 child: TextButton(
                                   onPressed: () {
-                                    Navigator.push(context,MaterialPageRoute(builder: (context) => getstarted()),);
+                                    Navigator.pushNamed(context, '/GetStarted');
                                   },
                                   child: Center(
                                     child: Text(
@@ -149,7 +149,7 @@ class WebsiteAd extends StatelessWidget {
                   Expanded(
                     flex: constraints.maxWidth > 720.0 ? 1 : 0,
                     child: Image.asset(
-                      "cell.png",
+                      "assets/get3.png",
                       // Set width for image on smaller screen
                       width: constraints.maxWidth > 720.0 ? null : 350.0,
                     ),

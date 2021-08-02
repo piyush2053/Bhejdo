@@ -60,7 +60,7 @@ Widget _buildUi(double width) {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         image: DecorationImage(
-                          image: AssetImage("bg.png"),
+                          image: AssetImage("assets/bg.png"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -74,7 +74,7 @@ Widget _buildUi(double width) {
                               Column(
                                 children: [
                                   CircleAvatar(
-                                    backgroundImage: AssetImage("ab.png"),
+                                    backgroundImage: AssetImage("assets/ab.png"),
                                   ),
                                   Text(
                                     "ALIASGER BHANDARI",
@@ -118,7 +118,7 @@ Widget _buildUi(double width) {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         image: DecorationImage(
-                          image: AssetImage("bg.png"),
+                          image: AssetImage("assets/bg.png"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -132,7 +132,7 @@ Widget _buildUi(double width) {
                               Column(
                                 children: [
                                   CircleAvatar(
-                                    backgroundImage: AssetImage("ap.png"),
+                                    backgroundImage: AssetImage("assets/ap.png"),
                                   ),
                                   Text(
                                     "ABHISHEK PAREEK",
@@ -176,7 +176,7 @@ Widget _buildUi(double width) {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         image: DecorationImage(
-                          image: AssetImage("bg.png"),
+                          image: AssetImage("assets/bg.png"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -190,7 +190,7 @@ Widget _buildUi(double width) {
                               Column(
                                 children: [
                                   CircleAvatar(
-                                    backgroundImage: AssetImage("ranjeet.png"),
+                                    backgroundImage: AssetImage("assets/ranjeet.png"),
                                   ),
                                   Text(
                                     "RANJEET SINGH BHATI",
@@ -234,7 +234,7 @@ Widget _buildUi(double width) {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         image: DecorationImage(
-                          image: AssetImage("bg.png"),
+                          image: AssetImage("assets/bg.png"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -248,7 +248,7 @@ Widget _buildUi(double width) {
                               Column(
                                 children: [
                                   CircleAvatar(
-                                    backgroundImage: AssetImage("manasi.png"),
+                                    backgroundImage: AssetImage("assets/manasi.png"),
                                   ),
                                   Text(
                                     "MANASI SUNIL",
@@ -292,7 +292,7 @@ Widget _buildUi(double width) {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         image: DecorationImage(
-                          image: AssetImage("bg.png"),
+                          image: AssetImage("assets/bg.png"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -306,7 +306,7 @@ Widget _buildUi(double width) {
                               Column(
                                 children: [
                                   CircleAvatar(
-                                    backgroundImage: AssetImage("item5.png"),
+                                    backgroundImage: AssetImage("assets/item5.png"),
                                   ),
                                   Text(
                                     "SHRUTI VINCENT",
